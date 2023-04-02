@@ -85,8 +85,69 @@ const getNotesByIdHandler = (request, h) => {
     return response;
 }
 
+const editNotesByIdHandler = (request, h) => {
+
+    const {id} = request.params;
+
+    const {title, tags, body} = request.payload;
+
+    const updatedAt = new Date().toISOString();
+
+    const ind =  notes.findIndex((note)=> note.id === id);
+    if(ind !== -1) 
+    {
+        notes[ind] = {
+            ...notes[ind],
+            title,
+            tags,
+            body,
+            updatedAt,
+        }
+        return h.response({
+            status : "success",
+            message : "catatan berhasil diperbarui"
+        })
+    }
+
+    const response = h.response({
+        status : "failed",
+        mesesage  : "catatan gagal diperbarui, Id tidak ditemukan"
+    });
+
+    response.code(404);
+    return response;
+
+}
+
+const deleteNoteByIdHandler = (request, h) => 
+{
+    const { id }  = request.params;
+    const indx = notes.findIndex((note) => note['id'] === id);
+    
+    if(indx !== -1) 
+    {
+        notes.splice(indx, 1);
+        return h.response({
+            status : "success",
+            message : "berhasil menghapus note",
+        })
+    }
+
+    const response = h.response({
+        status : "failed",
+        message : "gagal menghapus note, id tidak ditemukan"
+    })
+    response.code(404);
+    return response;
+
+
+
+}
+
 module.exports = {
     addNoteHandler,
     getNotesHandler,
     getNotesByIdHandler,
+    editNotesByIdHandler,
+    deleteNoteByIdHandler,
 };
