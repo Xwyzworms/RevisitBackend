@@ -2,6 +2,9 @@ const {
     saveBookHandler,
     getBooks,
     getBookById,
+    getBooksByNameHandler,
+    getBooksByReadingsHandler,
+    getBooksByFinishedHandler,
     editBookById,
     deleteBookById
 
@@ -22,7 +25,9 @@ const routes = [
         method : "GET",
         path :"/books/{id}",
         handler : getBookById
-    }, 
+    },
+
+
     {
         method : "PUT",
         path : "/books/{id}",
