@@ -1,0 +1,254 @@
+*, 
+*::before,
+*::after {
+    margin :0;
+    padding : 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size : 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    padding : 5rem 5rem 10rem;
+    line-height: 1.7;
+    color : #555;
+    background : linear-gradient(to bottom right, #9be15d, #00e3ae);
+    min-height: 100vh;
+}
+
+/*H1 later yaa */
+
+h1 {
+    font-size : 6rem;
+    color : white;
+    transform: skewY(-5deg);
+    text-align: center;
+    position : relative;
+    word-spacing: 4px;
+}
+
+h1::before {
+   content : "";
+   display: block;
+   height : 60%;
+   width : 50%;
+   position : absolute;
+   background-image: linear-gradient(to bottom, #9be15d, #00e3ae);
+   opacity: 0.8;
+   z-index: -1;
+   top:105%;
+   left:50%;
+   transform : skewY(370deg) translate(-50%, -50%);
+
+}
+/*############################ PRODUCT HERO SECTION ###############################
+*/
+
+.container {
+    width : 95rem;
+    margin : 0 auto;
+}
+
+.product 
+{
+    width : 60rem;
+    margin : 0 auto;
+    margin-top : 9rem;
+    background: white;
+    box-shadow : 0 3rem 6rem 1rem rgba(0,0,0,0.2);
+    position : relative;
+}
+
+.product__hero {
+    position :relative;
+    height : 22rem;
+    overflow: hidden;
+}
+
+.product__hero::before{
+    content : '';
+    display : block;
+    position : absolute;
+    height: 100%;
+    width: 100%;
+    top : 0;
+    left :0;
+    background-image: linear-gradient(to left bottom, #9be15d, #00e3ae);
+    opacity: 0.5;
+    z-index: 100;
+}
+
+.product__emoji {
+    font-size: 15rem;
+    position: absolute;
+}
+
+.product__emoji--1 
+{
+    top:-3rem;
+    left:39rem;
+    z-index: 10;
+    
+}
+
+.product__emoji--2
+{
+    top:-8rem;
+    left:9rem;
+    z-index: 10;
+}
+.product__emoji--3 
+{
+    top:7rem;
+    left:20rem;
+    z-index: 10;
+}
+.product__emoji--4
+{
+    top: -5rem;
+    left:20rem;
+    z-index: 10;
+}
+.product__emoji--5
+{
+    top:2rem;
+    left:30rem;
+    z-index: 9;
+}
+.product__emoji--6
+{
+    top:2rem;
+    left:10rem;
+    z-index: 9;
+}
+.product__emoji--7
+{
+    top:-4rem;
+    left:50rem;
+    z-index: 10;
+}
+.product__emoji--8
+{
+    top:6rem;
+    left:40rem;
+    z-index: 10;
+}
+.product__organic {
+    position : absolute;
+    top: -4rem;
+    right :-4rem;
+    height : 11rem;
+    width: 11rem;
+    border-radius: 50%;
+    background-image : linear-gradient(to left bottom, #9be15d, #00e3ae);
+    display: flex;
+    z-index : 1000;
+    align-items: center;
+    justify-content: center;
+    box-shadow : 0 2rem 4rem rgba(0,0,0,0.3);
+}
+
+.product__organic h5 {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size : 1.8rem;
+    color : white;
+}
+
+/* Style Back*/ 
+.product__back:link,
+.product__back:visited{
+    position : absolute;
+    top : 1rem;
+    left : 1rem;
+    font-size:1.5rem; 
+    font-weight : 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color : #555;
+    background-color: white;
+    border-radius: 100rem;
+    padding : 0 2rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.3);
+    transition :all 0.5s;
+    display : flex;
+    z-index: 1000;
+    align-items: center;
+}
+
+.product__back:hover ,
+.product__back:active
+{
+    background: #79e17b;
+} 
+/* Style Back*/ 
+
+/* Style product name */
+.product__name {
+    background-image : linear-gradient(to bottom, #9be15d, #00e3ae);
+    text-align: center;
+    padding : 1rem;
+    font-size : 4rem;
+    color : white;
+    word-spacing: 4px;
+}
+/* Style product name */
+
+/* Style product details */
+.product__details 
+{
+    background-color:  #eee;
+    padding : 4rem 6rem;
+    font-size : 1.6rem;
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+}
+/* Style product details */
+
+/* Emoji style */
+.emoji-left 
+{
+    font-size : 2rem;  
+    margin-right: 1rem; 
+}
+/* Emoji Style */
+
+.product__link:link,
+.product__link:visited {
+    display: block;
+    background-color: #79e17b;
+    font-size : 1.6rem;
+    color : white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding : 1.5rem;
+    transform: scale(1.05) skew(-15deg);
+    box-shadow: 0 1rem 6rem rgba(0,0,0,0.2);
+    transition : all 0.5s;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product__link:hover,
+.product__link:active {
+    background-color: #9be15d;
+    transform : scale(1.10) skew(-20deg)
+}
+
+.product__link span {
+    transform : skew(20deg);
+}
+
+/*Product description Style */
+.product__description {
+    padding : 5rem 6rem;
+    font-size : 1.5rem;
+    line-height: 1.8;
+}
+
+/*Product description Style */

@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+    padding : 0;
+    margin : 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size : 62.5%;
+    box-sizing : border-box;
+   
+}
+
+body {
+    padding : 5rem 5rem 10rem;
+    line-height: 1.7;
+    color : #555;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #9be15d, #00e3ae);
+}
+
+h1 {
+    font-size : 6rem;
+    color : white;
+    transform : skewY(-5deg);
+    text-align: center;
+    position : relative;
+    word-spacing : 3px;
+}
+
+h1::before 
+{
+    content : '';
+    display : block;
+    height : 60%;
+    width : 50%;
+    position :absolute;
+    z-index : -1;
+    background:red; /*linear-gradient(to bottom, #9be15d, #00e3ae);*/
+    left : 50%;
+    top : 105%;
+    transform : skewY(370deg) translate(-50%, -50%);
+    opacity: 0.8;
+
+}
+
+.container {
+    width : 95rem;
+    margin : 0 auto;
+}
+
+.cards-container {
+    margin-top: 8rem;
+}
+
+.card {
+    background: white;
+    box-shadow : 0 2rem 6rem 1rem rgba(0,0,0,0.2);
+    display :flex;
+    margin-bottom: 5rem;
+    transition : all 0.5s;
+    transform : skewX(-20deg);
+    
+}
+
+.card__emoji {
+    font-size : 5.5rem;
+    line-height: 1.2;
+    padding : 1.5rem 6rem 0.5rem 1.5rem;
+    letter-spacing : -4rem;
+    transform:skewX(20deg);
+}
+
+.card__title-box {
+    background : linear-gradient(to bottom, #9be15d, #00e3ae);
+    margin-right: auto;
+    display : flex;
+    padding : 0 3rem;
+    align-items: center;
+}
+
+.card__title {
+    font-size : 3.25rem;
+    transform : skewX(20deg);
+    color : white;
+}
+
+
+.card__details{
+    display :flex;
+    
+}
+
+
+.card__detail-box 
+{
+    align-self: stretch;   
+    display : flex;
+    align-items: center;
+    border-right: 1px solid red;
+}
+
+.card__detail-box:last-child{
+    border : none
+}
+
+.card__detail {
+    font-weight: 400;
+    font-size:1.8rem;
+    transform : skewX(20deg);
+    padding : 1.75rem;
+}
+
+.card__detail--organic {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size : 1.9rem;
+    background-image : linear-gradient(to right, #9be15d, #00e3ae);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color :transparent;
+}
+
+.card__detail--price {
+    font-weight: 900;
+    font-size : 1.9rem;
+}
+
+.card__link:visited,
+.card__link:link {
+    flex: 0 0 auto;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    color : white;
+    display : flex;
+    align-items : center;
+    text-align: center;
+    justify-content: center;
+    background-color : #00e3ae;
+    font-size : 1.6rem;
+    padding : 2.5rem;
+    transition:  all 0.3s;
+}
+
+.emoji-right {
+    font-size : 2rem;
+    margin-left: 1rem;
+}
+
+
+ 
